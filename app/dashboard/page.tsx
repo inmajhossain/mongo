@@ -1,3 +1,4 @@
+
 // app/dashboard/page.tsx
 'use client';
 
@@ -66,7 +67,7 @@ export default function Dashboard() {
     setBookings(prev =>
       prev.map(booking =>
         booking._id === bookingId
-          ? { ...booking, status: newStatus as any }
+          ? { ...booking, status: newStatus as unknown as any }
           : booking
       )
     );

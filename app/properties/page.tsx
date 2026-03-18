@@ -218,7 +218,7 @@ export default function Properties() {
         ) : (
           <div className="gap-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
             {properties.map((property) => (
-              <div key={property._id as string} className="bg-white shadow-lg hover:shadow-xl rounded-lg overflow-hidden transition duration-200">
+              <div key={property._id as unknown as string} className="bg-white shadow-lg hover:shadow-xl rounded-lg overflow-hidden transition duration-200">
                 {/* Image Section */}
                 <div className="relative w-full h-48">
                   <Image
@@ -252,7 +252,7 @@ export default function Properties() {
 
                     {/* Book Now Button */}
                     <button
-                      onClick={() => handleBookNow(property._id as string, property.title)}
+                      onClick={() => handleBookNow(property._id as unknown as string, property.title)}
                       className="bg-green-600 hover:bg-green-700 mt-4 px-4 py-2 rounded-md w-full font-medium text-white transition duration-200"
                     >
                       Book Now
