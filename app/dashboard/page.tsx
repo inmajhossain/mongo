@@ -197,7 +197,7 @@ export default function Dashboard() {
         <div className="flex justify-between items-center mb-8">
           <h1 className="font-bold text-gray-900 text-3xl">Client Dashboard</h1>
           <Link
-            href="/properties"
+            href="/#"
             className="bg-blue-600 hover:bg-blue-700 px-6 py-2 rounded-md text-white transition duration-200"
           >
             View Properties

@@ -4,6 +4,7 @@
 import { useState, FormEvent, ChangeEvent } from 'react';
 import { useRouter } from 'next/navigation';
 import Image from 'next/image';
+import Link from 'next/link';
 
 interface FormData {
   title: string;
@@ -134,8 +135,16 @@ export default function AddProperty() {
   };
 
   return (
-    <div className="bg-gray-100 px-4 sm:px-6 lg:px-8 py-12 min-h-screen">
+    <div className="px-4 sm:px-6 lg:px-8 py-12 min-h-screen">
       <div className="mx-auto max-w-2xl">
+        <div className='flex flex-row justify-end items-end mb-10'>
+          <Link
+            href="/#"
+            className="bg-white hover:bg-amber-100 px-6 py-2 rounded-md text-black transition duration-200"
+          >
+            View Properties
+          </Link>
+        </div>
         <div className="bg-white shadow-xl rounded-lg overflow-hidden">
           <div className="px-6 py-8">
             <h2 className="mb-8 font-bold text-gray-900 text-3xl text-center">
@@ -314,6 +323,7 @@ export default function AddProperty() {
             </form>
           </div>
         </div>
+        
       </div>
     </div>
   );
